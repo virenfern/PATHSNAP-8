@@ -1,0 +1,44 @@
+{
+  "data_root": "local source path omitted",
+  "partitions": {
+    "train": 80,
+    "student_test": 10
+  },
+  "trip_count": 90,
+  "config": {
+    "candidate_radius_m": 60,
+    "label_radius_m": 100,
+    "fallback_label_radius_m": 300,
+    "max_candidates": 12,
+    "max_label_candidates": 256,
+    "cell_m": 100,
+    "progress_weight": 0.35
+  },
+  "gps_totals": {
+    "gps_rows": 227577,
+    "nodes": 2024174,
+    "arcs": 4061945,
+    "route_arcs": 34813,
+    "file_bytes": 94106043,
+    "timestamp_non_increasing_steps": 0,
+    "gap_gt_1_5s": 7537,
+    "gap_gt_5s": 1260,
+    "duplicate_consecutive_coordinates": 6,
+    "speed_gt_40mps_steps": 4231
+  },
+  "network_summary": {
+    "mean_weak_components": 37.2,
+    "median_largest_component_fraction": 0.9801701640086846,
+    "trips_with_isolated_nodes": 0
+  },
+  "candidate_summary": {
+    "candidate_observations": 227577,
+    "candidate_misses": 42326,
+    "candidate_rows": 1628101,
+    "route_alignment_fallbacks": 27482,
+    "training_observations_covered": 170945,
+    "training_candidate_rows": 1308050,
+    "train_reference_candidate_coverage": 0.820206605027421,
+    "student_test_reference_candidate_coverage": 0.7466597077244259
+  }
+}

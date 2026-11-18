@@ -1,0 +1,28 @@
+{
+  "predictor_features": [
+    "distance_to_segment_m",
+    "projection_fraction",
+    "segment_length_m",
+    "road_bearing_sin",
+    "road_bearing_cos",
+    "heading_difference_sin",
+    "heading_difference_cos",
+    "heading_valid",
+    "gps_speed_mps",
+    "gps_gap_s",
+    "candidate_rank"
+  ],
+  "target": "label",
+  "target_meaning": "1 if candidate_arc_id equals the route arc assigned to this GPS observation by monotone progress-aware spatial alignment; 0 otherwise",
+  "identifiers_and_target_metadata_to_exclude_from_X": [
+    "partition",
+    "trip_id",
+    "observation_index",
+    "timestamp_s",
+    "candidate_arc_id",
+    "reference_arc_id",
+    "reference_route_position"
+  ],
+  "split_guidance": "Group by trip_id. Never split candidate rows randomly across train/validation folds.",
+  "coverage_note": "Only observations whose assigned reference arc occurs in the candidate set are written to the training table. candidate_coverage.csv records all observations, including misses."
+}

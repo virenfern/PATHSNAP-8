@@ -1,0 +1,36 @@
+{
+  "candidate_search": {
+    "radius_m": 60,
+    "max_candidates": 12,
+    "reference_search_radius_m": 100,
+    "fallback_radius_m": 300,
+    "route_progress_weight": 0.35
+  },
+  "candidate_coverage": {
+    "train": {
+      "trips": 80,
+      "observations": 208417,
+      "reference_arc_misses": 37472,
+      "covered_observations": 170945,
+      "coverage_fraction": 0.820206605027421
+    },
+    "student_test": {
+      "trips": 10,
+      "observations": 19160,
+      "reference_arc_misses": 4854,
+      "covered_observations": 14306,
+      "coverage_fraction": 0.7466597077244259
+    }
+  },
+  "training_table": {
+    "path": "train_candidate_features.csv.gz",
+    "candidate_rows": 1308050,
+    "positive_candidate_rows": 170945,
+    "negative_candidate_rows": 1137105,
+    "covered_observation_groups": 170945,
+    "training_trip_groups": 80,
+    "groups_with_positive_count_not_equal_to_one": 0,
+    "nonfinite_or_wrong_partition_rows": 0,
+    "positive_row_fraction": 0.13068690034784602
+  }
+}
