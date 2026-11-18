@@ -1,0 +1,85 @@
+{
+  "scikit_learn": "1.9.1",
+  "folds": 5,
+  "splitter": "GroupKFold by trip_id",
+  "seed": 42,
+  "training_candidate_rows": 1308050,
+  "training_trips": 80,
+  "student_test_candidate_rows": 160251,
+  "student_test_reference_labeled_rows": 133131,
+  "models": [
+    {
+      "model": "Logistic Regression",
+      "parameters": "{'memory': None, 'steps': [('standardscaler', StandardScaler()), ('logisticregression', LogisticRegression(C=0.5, class_weight='balanced', max_iter=60, random_state=42))], 'transform_input': None, 'verbose': False}",
+      "cv_confusion_matrix": [
+        [
+          901406,
+          235699
+        ],
+        [
+          32108,
+          138837
+        ]
+      ]
+    },
+    {
+      "model": "Decision Tree",
+      "parameters": "{'ccp_alpha': 0.0, 'class_weight': 'balanced', 'criterion': 'gini', 'max_depth': 12, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 100, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'random_state': 42, 'splitter': 'best'}",
+      "cv_confusion_matrix": [
+        [
+          914595,
+          222510
+        ],
+        [
+          33019,
+          137926
+        ]
+      ]
+    },
+    {
+      "model": "Random Forest",
+      "parameters": "{'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': 'balanced_subsample', 'criterion': 'gini', 'max_depth': 14, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 80, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 18, 'n_jobs': 2, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}",
+      "cv_confusion_matrix": [
+        [
+          941247,
+          195858
+        ],
+        [
+          33850,
+          137095
+        ]
+      ]
+    },
+    {
+      "model": "Extra Trees",
+      "parameters": "{'bootstrap': False, 'ccp_alpha': 0.0, 'class_weight': 'balanced', 'criterion': 'gini', 'max_depth': 14, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 80, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 18, 'n_jobs': 2, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}",
+      "cv_confusion_matrix": [
+        [
+          925213,
+          211892
+        ],
+        [
+          34561,
+          136384
+        ]
+      ]
+    },
+    {
+      "model": "Hist Gradient Boosting",
+      "parameters": "{'categorical_features': 'from_dtype', 'class_weight': None, 'early_stopping': True, 'interaction_cst': None, 'l2_regularization': 1.0, 'learning_rate': 0.1, 'loss': 'log_loss', 'max_bins': 255, 'max_depth': None, 'max_features': 1.0, 'max_iter': 35, 'max_leaf_nodes': 15, 'min_samples_leaf': 100, 'monotonic_cst': None, 'n_iter_no_change': 10, 'random_state': 42, 'scoring': 'loss', 'tol': 1e-07, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}",
+      "cv_confusion_matrix": [
+        [
+          1101710,
+          35395
+        ],
+        [
+          106181,
+          64764
+        ]
+      ]
+    }
+  ],
+  "selected_model": "Hist Gradient Boosting",
+  "selection_rule": "Lowest grouped-CV candidate Log Loss (probability quality); Macro-F1 and observation-level Top-1 are reported as complementary metrics. Student-test metrics did not determine selection.",
+  "selection_note": "Provisional with respect to the supplied comparison template: route continuity has not been computed."
+}
