@@ -1,0 +1,7 @@
+Selected model family: Hist Gradient Boosting
+Bayesian search: 6 configurations; Gaussian-process Expected Improvement after 3 random initial trials.
+Objective: mean candidate-level Log Loss across 3 GroupKFold folds grouped by trip_id.
+Untuned CV Log Loss: 0.247615
+Best tuned CV Log Loss: 0.245513
+Student-test evaluation: kept separate from the optimization objective.
+Decoder: HMM/Viterbi using classifier emission probabilities and directed-road transition weights.

@@ -1,0 +1,7 @@
+Selected tuned model: Hist Gradient Boosting
+Objective: mean 3-fold GroupKFold candidate Log Loss, grouped by trip_id.
+Untuned baseline CV Log Loss: 0.247615
+Best tuned CV Log Loss: 0.245513
+Selected trial: 2
+Parameters: {"l2_regularization": 3.26392401342566, "learning_rate": 0.16438810179505506, "max_iter": 38, "max_leaf_nodes": 29, "min_samples_leaf": 85}
+Student-test data was not used during optimization.

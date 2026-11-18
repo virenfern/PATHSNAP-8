@@ -1,0 +1,30 @@
+{
+  "overall": [
+    {
+      "decoder": "classifier_only",
+      "labeled_observations": 16300,
+      "reference_arc_accuracy": 0.5154601226993865,
+      "route_continuity_short_gap": 0.8688893541295928,
+      "continuous_transitions": 16601,
+      "eligible_short_gap_transitions": 19106
+    },
+    {
+      "decoder": "hmm_viterbi",
+      "labeled_observations": 16300,
+      "reference_arc_accuracy": 0.5355828220858896,
+      "route_continuity_short_gap": 0.9947137025018319,
+      "continuous_transitions": 19005,
+      "eligible_short_gap_transitions": 19106
+    }
+  ],
+  "represented_observation_groups": 19160,
+  "labeled_observation_groups": 16300,
+  "labeled_reference_arc_missing_from_candidate_set": 1994,
+  "labeled_reference_candidate_coverage": 0.8776687116564417,
+  "total_relaxed_gap_steps": 44,
+  "total_steps_with_no_link_between_candidate_sets": 0,
+  "continuity_definition": "Fraction of consecutive predicted arcs that are identical or directly connected (end node of prior arc equals start node of next arc), among represented consecutive GPS observations with gap <= 5 seconds.",
+  "evaluation_scope": "Accuracy includes all represented student-test observations with an assigned reference arc. If the reference arc is absent from that observation\u2019s candidate set, the prediction is necessarily counted wrong. Unlabeled observations are excluded from accuracy.",
+  "trips_evaluated": 10,
+  "model": "untuned_hist_gradient_boosting.joblib"
+}

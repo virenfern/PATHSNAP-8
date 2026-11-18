@@ -1,0 +1,309 @@
+{
+  "method": "Gaussian-process Bayesian optimization with Expected Improvement",
+  "objective": "Mean candidate-level Log Loss over group-aware CV folds",
+  "splitter": "3-fold GroupKFold by trip_id",
+  "student_test_used_for_optimization": false,
+  "seed": 2026,
+  "training_rows": 1308050,
+  "training_trips": 80,
+  "baseline_parameters": {
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 100,
+    "l2_regularization": 1.0,
+    "max_iter": 35
+  },
+  "baseline_mean_cv_log_loss": 0.24761500495274957,
+  "baseline_fold_log_loss": [
+    {
+      "fold": 1,
+      "rows": 434040,
+      "validation_trips": 26,
+      "log_loss": 0.2683691333882304
+    },
+    {
+      "fold": 2,
+      "rows": 437334,
+      "validation_trips": 27,
+      "log_loss": 0.25089659148349086
+    },
+    {
+      "fold": 3,
+      "rows": 436676,
+      "validation_trips": 27,
+      "log_loss": 0.2235792899865275
+    }
+  ],
+  "trials": [
+    {
+      "trial": 1,
+      "method": "random_initialization",
+      "vector": [
+        0.060418918324824156,
+        22.0,
+        143.0,
+        1.8525026355402403,
+        41.0
+      ],
+      "parameters": {
+        "learning_rate": 0.060418918324824156,
+        "max_leaf_nodes": 22,
+        "min_samples_leaf": 143,
+        "l2_regularization": 1.8525026355402403,
+        "max_iter": 41
+      },
+      "mean_cv_log_loss": 0.24974786929922388,
+      "fit_seconds_total": 26.434617199993227,
+      "folds": [
+        {
+          "fold": 1,
+          "rows": 434040,
+          "validation_trips": 26,
+          "log_loss": 0.26943875940196926
+        },
+        {
+          "fold": 2,
+          "rows": 437334,
+          "validation_trips": 27,
+          "log_loss": 0.25337873404078126
+        },
+        {
+          "fold": 3,
+          "rows": 436676,
+          "validation_trips": 27,
+          "log_loss": 0.22642611445492106
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "method": "random_initialization",
+      "vector": [
+        0.16438810179505506,
+        29.0,
+        85.0,
+        3.26392401342566,
+        38.0
+      ],
+      "parameters": {
+        "learning_rate": 0.16438810179505506,
+        "max_leaf_nodes": 29,
+        "min_samples_leaf": 85,
+        "l2_regularization": 3.26392401342566,
+        "max_iter": 38
+      },
+      "mean_cv_log_loss": 0.24551278594200843,
+      "fit_seconds_total": 25.722050700002,
+      "folds": [
+        {
+          "fold": 1,
+          "rows": 434040,
+          "validation_trips": 26,
+          "log_loss": 0.2765792122617919
+        },
+        {
+          "fold": 2,
+          "rows": 437334,
+          "validation_trips": 27,
+          "log_loss": 0.2445198488114358
+        },
+        {
+          "fold": 3,
+          "rows": 436676,
+          "validation_trips": 27,
+          "log_loss": 0.21543929675279763
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "method": "random_initialization",
+      "vector": [
+        0.1943835740276064,
+        29.0,
+        177.0,
+        3.763660485395433,
+        51.0
+      ],
+      "parameters": {
+        "learning_rate": 0.1943835740276064,
+        "max_leaf_nodes": 29,
+        "min_samples_leaf": 177,
+        "l2_regularization": 3.763660485395433,
+        "max_iter": 51
+      },
+      "mean_cv_log_loss": 0.24687675602908862,
+      "fit_seconds_total": 30.883457000003546,
+      "folds": [
+        {
+          "fold": 1,
+          "rows": 434040,
+          "validation_trips": 26,
+          "log_loss": 0.27934683298297985
+        },
+        {
+          "fold": 2,
+          "rows": 437334,
+          "validation_trips": 27,
+          "log_loss": 0.24667381849611034
+        },
+        {
+          "fold": 3,
+          "rows": 436676,
+          "validation_trips": 27,
+          "log_loss": 0.21460961660817574
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "method": "gaussian_process_expected_improvement",
+      "vector": [
+        0.08137724568515231,
+        29.0,
+        210.0,
+        3.6849478019322297,
+        28.0
+      ],
+      "parameters": {
+        "learning_rate": 0.08137724568515231,
+        "max_leaf_nodes": 29,
+        "min_samples_leaf": 210,
+        "l2_regularization": 3.6849478019322297,
+        "max_iter": 28
+      },
+      "mean_cv_log_loss": 0.24984166625047058,
+      "fit_seconds_total": 20.055818799992267,
+      "folds": [
+        {
+          "fold": 1,
+          "rows": 434040,
+          "validation_trips": 26,
+          "log_loss": 0.2699015947680714
+        },
+        {
+          "fold": 2,
+          "rows": 437334,
+          "validation_trips": 27,
+          "log_loss": 0.2531933847677659
+        },
+        {
+          "fold": 3,
+          "rows": 436676,
+          "validation_trips": 27,
+          "log_loss": 0.2264300192155745
+        }
+      ]
+    },
+    {
+      "trial": 5,
+      "method": "gaussian_process_expected_improvement",
+      "vector": [
+        0.12749352762917757,
+        23.0,
+        131.0,
+        4.54423156176274,
+        67.0
+      ],
+      "parameters": {
+        "learning_rate": 0.12749352762917757,
+        "max_leaf_nodes": 23,
+        "min_samples_leaf": 131,
+        "l2_regularization": 4.54423156176274,
+        "max_iter": 67
+      },
+      "mean_cv_log_loss": 0.2455975528414336,
+      "fit_seconds_total": 36.96773699999903,
+      "folds": [
+        {
+          "fold": 1,
+          "rows": 434040,
+          "validation_trips": 26,
+          "log_loss": 0.2764670808747791
+        },
+        {
+          "fold": 2,
+          "rows": 437334,
+          "validation_trips": 27,
+          "log_loss": 0.246011131556945
+        },
+        {
+          "fold": 3,
+          "rows": 436676,
+          "validation_trips": 27,
+          "log_loss": 0.2143144460925767
+        }
+      ]
+    },
+    {
+      "trial": 6,
+      "method": "gaussian_process_expected_improvement",
+      "vector": [
+        0.030255474058852053,
+        24.0,
+        71.0,
+        2.6518880797745603,
+        43.0
+      ],
+      "parameters": {
+        "learning_rate": 0.030255474058852053,
+        "max_leaf_nodes": 24,
+        "min_samples_leaf": 71,
+        "l2_regularization": 2.6518880797745603,
+        "max_iter": 43
+      },
+      "mean_cv_log_loss": 0.2652954535740788,
+      "fit_seconds_total": 26.663949399997364,
+      "folds": [
+        {
+          "fold": 1,
+          "rows": 434040,
+          "validation_trips": 26,
+          "log_loss": 0.27878574071720547
+        },
+        {
+          "fold": 2,
+          "rows": 437334,
+          "validation_trips": 27,
+          "log_loss": 0.27092474391560856
+        },
+        {
+          "fold": 3,
+          "rows": 436676,
+          "validation_trips": 27,
+          "log_loss": 0.24617587608942232
+        }
+      ]
+    }
+  ],
+  "selected_trial": 2,
+  "selected_parameters": {
+    "learning_rate": 0.16438810179505506,
+    "max_leaf_nodes": 29,
+    "min_samples_leaf": 85,
+    "l2_regularization": 3.26392401342566,
+    "max_iter": 38
+  },
+  "selected_mean_cv_log_loss": 0.24551278594200843,
+  "selected_fold_log_loss": [
+    {
+      "fold": 1,
+      "rows": 434040,
+      "validation_trips": 26,
+      "log_loss": 0.2765792122617919
+    },
+    {
+      "fold": 2,
+      "rows": 437334,
+      "validation_trips": 27,
+      "log_loss": 0.2445198488114358
+    },
+    {
+      "fold": 3,
+      "rows": 436676,
+      "validation_trips": 27,
+      "log_loss": 0.21543929675279763
+    }
+  ],
+  "fit_seconds_baseline_cv": 21.62886169999547
+}

@@ -1,0 +1,3 @@
+decoder,labeled_observations,reference_arc_accuracy,route_continuity_short_gap,continuous_transitions,eligible_short_gap_transitions
+classifier_only,16300,0.5105521472392638,0.8615094734638333,16460,19106
+hmm_viterbi,16300,0.5380368098159509,0.994452004605883,19000,19106
